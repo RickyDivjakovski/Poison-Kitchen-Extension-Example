@@ -1,0 +1,8 @@
+# this sets the extension name
+Name:Fake optimizer
+
+# this sets the extension description
+Description:Do not apply this to rom, its a fake extension to show an example
+
+# this is the poison script to run(must be in same directory)
+Run:FakeOpt.psh

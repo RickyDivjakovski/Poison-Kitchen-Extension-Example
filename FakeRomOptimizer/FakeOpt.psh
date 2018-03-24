@@ -1,0 +1,31 @@
+# Fake script, used as an example extension
+# By ricky divjakovski
+
+#THIS IS HOW YOU COMMENT OUT LINES
+
+# Change line in file option, choose to find a phrase in a line at start, middle or end, if found replace the line with 4th arg
+CHANGE|START|/system/build.prop|ro.product.device=|THIS IS STARTS TEST
+CHANGE|CONTAINS|/system/build.prop|product.locale=en-|THIS IS CONTAINS TEST
+CHANGE|END|/system/build.prop|brand=Amlogic|THIS IS ENDS TEST
+
+# Append file option, append a file by appending to top or bottom
+APPEND|TOP|/system/build.prop|# A TEST FOR APPENDING TOP
+APPEND|BOTTOM|/system/build.prop|# A TEST APPENDING BOTTOM
+
+# Remove line in file option, find a string inside a line and remove that line
+REMOVE|/system/build.prop|# end fota properties
+
+# Delete file or folder option, will detect if file or folder automatically, may conflict if file and folder have the same name.
+DELETE|/system/preinstall
+
+# Create file or folder option, specify if file or folder, then path
+CREATE|DIRECTORY|/preinstall
+CREATE|FILE|/system/test.prop
+
+# Rename file or folder option, specify path or file name, then the new name
+RENAME|/system/bin/am|amRenamed
+
+# Extract a folder to root of rom
+EXTRACT|root
+
+# TO PACKAGE, SIMPLY ZIP THE FOLDER YOUR EXTENSION FILES ARE IN.
